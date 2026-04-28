@@ -8,6 +8,7 @@ public class TodoItem
     public decimal Price { get; set; }
     public bool IsCompleted { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public int? TimeToComplete { get; set; }
 }
 
 public class CreateTodoRequest
@@ -15,6 +16,7 @@ public class CreateTodoRequest
     public string Title { get; set; } = string.Empty;
     public string? Description { get; set; }
     public decimal Price { get; set; }
+    public int? TimeToComplete { get; set; }
 }
 
 public class UpdateTodoRequest
