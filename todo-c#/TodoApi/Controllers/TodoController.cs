@@ -38,7 +38,8 @@ public class TodoController(TodoDbContext db) : ControllerBase
         {
             Title = request.Title,
             Description = request.Description,
-            Price = request.Price
+            Price = request.Price,
+            TimeToComplete = request.TimeToComplete
         };
 
         db.Todos.Add(todo);

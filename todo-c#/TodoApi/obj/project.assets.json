@@ -2404,11 +2404,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/akashpinnani/development microsoft/todo-c#/TodoApi/TodoApi.csproj",
+      "projectUniqueName": "/Users/akashpinnani/Documents/GitHub/todo-c-/todo-c#/TodoApi/TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "/Users/akashpinnani/development microsoft/todo-c#/TodoApi/TodoApi.csproj",
+      "projectPath": "/Users/akashpinnani/Documents/GitHub/todo-c-/todo-c#/TodoApi/TodoApi.csproj",
       "packagesPath": "/Users/akashpinnani/.nuget/packages/",
-      "outputPath": "/Users/akashpinnani/development microsoft/todo-c#/TodoApi/obj/",
+      "outputPath": "/Users/akashpinnani/Documents/GitHub/todo-c-/todo-c#/TodoApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/akashpinnani/.nuget/NuGet/NuGet.Config"
