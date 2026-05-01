@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Todo App</title>
+  <title>To-Do</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -19,7 +19,7 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 2rem;
-      color: #4f46e5;
+      color: #16a34a;
       letter-spacing: -0.5px;
     }
 
@@ -176,7 +176,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>📝 Todo App</h1>
+    <h1>📝 To-Do</h1>
 
     <!-- Add / Edit form -->
     <div class="card">
@@ -200,7 +200,7 @@
         <textarea id="description" placeholder="Optional details..."></textarea>
       </div>
       <div class="form-actions">
-        <button class="btn-primary" onclick="submitForm()">Save Todo</button>
+        <button class="btn-primary" onclick="submitForm()">💾 Save</button>
         <button class="btn-secondary" id="cancel-btn" style="display:none" onclick="cancelEdit()">Cancel</button>
       </div>
     </div>
