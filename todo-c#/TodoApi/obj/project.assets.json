@@ -2399,19 +2399,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/akashpinnani/.nuget/packages/": {}
+    "/Users/rajarajeshwarigundu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/akashpinnani/Documents/GitHub/todo-c-/todo-c#/TodoApi/TodoApi.csproj",
+      "projectUniqueName": "/Users/rajarajeshwarigundu/Desktop/C# Dev/todo-c-/todo-c#/TodoApi/TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "/Users/akashpinnani/Documents/GitHub/todo-c-/todo-c#/TodoApi/TodoApi.csproj",
-      "packagesPath": "/Users/akashpinnani/.nuget/packages/",
-      "outputPath": "/Users/akashpinnani/Documents/GitHub/todo-c-/todo-c#/TodoApi/obj/",
+      "projectPath": "/Users/rajarajeshwarigundu/Desktop/C# Dev/todo-c-/todo-c#/TodoApi/TodoApi.csproj",
+      "packagesPath": "/Users/rajarajeshwarigundu/.nuget/packages/",
+      "outputPath": "/Users/rajarajeshwarigundu/Desktop/C# Dev/todo-c-/todo-c#/TodoApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/akashpinnani/.nuget/NuGet/NuGet.Config"
+        "/Users/rajarajeshwarigundu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"

@@ -39,6 +39,7 @@ public class TodoController(TodoDbContext db) : ControllerBase
             Title = request.Title,
             Description = request.Description,
             Price = request.Price,
+            StoreName = request.StoreName,
             TimeToComplete = request.TimeToComplete
         };
 
@@ -62,6 +63,7 @@ public class TodoController(TodoDbContext db) : ControllerBase
         todo.Title = request.Title;
         todo.Description = request.Description;
         todo.Price = request.Price;
+        todo.StoreName = request.StoreName;
         todo.IsCompleted = request.IsCompleted;
 
         await db.SaveChangesAsync();

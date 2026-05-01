@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Todo App</title>
+  <title>To-Do</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -19,7 +19,7 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 2rem;
-      color: #4f46e5;
+      color: #16a34a;
       letter-spacing: -0.5px;
     }
 
@@ -135,6 +135,15 @@
       font-size: 0.8rem;
     }
 
+    .store-badge {
+      background: #fef3c7;
+      color: #d97706;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
     .status-badge {
       padding: 0.15rem 0.5rem;
       border-radius: 999px;
@@ -167,7 +176,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>📝 Todo App</h1>
+    <h1>📝 To-Do</h1>
 
     <!-- Add / Edit form -->
     <div class="card">
@@ -181,13 +190,17 @@
           <label for="price">Price ($)</label>
           <input type="number" id="price" placeholder="0.00" min="0" step="0.01" />
         </div>
+        <div class="form-group" style="flex:1;min-width:120px">
+          <label for="storeName">Store Name</label>
+          <input type="text" id="storeName" placeholder="e.g., Walmart" />
+        </div>
       </div>
       <div class="form-group" style="margin-top:0.75rem">
         <label for="description">Description</label>
         <textarea id="description" placeholder="Optional details..."></textarea>
       </div>
       <div class="form-actions">
-        <button class="btn-primary" onclick="submitForm()">Save Todo</button>
+        <button class="btn-primary" onclick="submitForm()">💾 Save</button>
         <button class="btn-secondary" id="cancel-btn" style="display:none" onclick="cancelEdit()">Cancel</button>
       </div>
     </div>
@@ -222,6 +235,7 @@
             ${t.description ? `<div class="todo-desc">${escHtml(t.description)}</div>` : ''}
             <div class="todo-meta">
               <span class="price-badge">$${Number(t.price).toFixed(2)}</span>
+              ${t.storeName ? `<span class="store-badge">${escHtml(t.storeName)}</span>` : ''}
               <span class="status-badge ${t.isCompleted ? 'status-done' : 'status-pending'}">
                 ${t.isCompleted ? 'Completed' : 'Pending'}
               </span>
@@ -240,10 +254,11 @@
       const title = document.getElementById('title').value.trim();
       const description = document.getElementById('description').value.trim();
       const price = parseFloat(document.getElementById('price').value) || 0;
+      const storeName = document.getElementById('storeName').value.trim();
 
       if (!title) { showToast('Title is required'); return; }
 
-      const body = { title, description, price };
+      const body = { title, description, price, storeName };
 
       if (editingId) {
         const current = await (await fetch(`${API}/${editingId}`)).json();
@@ -273,6 +288,7 @@
       document.getElementById('title').value = t.title;
       document.getElementById('description').value = t.description || '';
       document.getElementById('price').value = t.price;
+      document.getElementById('storeName').value = t.storeName || '';
       document.getElementById('form-title').textContent = 'Edit Todo';
       document.getElementById('cancel-btn').style.display = 'inline-block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -303,6 +319,7 @@
       document.getElementById('title').value = '';
       document.getElementById('description').value = '';
       document.getElementById('price').value = '';
+      document.getElementById('storeName').value = '';
     }
 
     function escHtml(str) {
